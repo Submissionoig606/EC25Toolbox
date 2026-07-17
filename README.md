@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/eSTK%20%26%20VoWiFi-experimental-yellow" alt="eSTK and VoWiFi are experimental">
 </p>
 
-EC25 Toolbox is a native macOS menu bar utility for Quectel EC25 and compatible Baiwang USB modems. It communicates with the modem through IOKit and IOUSBHost, provides direct AT access, and combines cellular status, SMS, calling, SIM security, remote management, eUICC operations, and experimental VoWiFi support in one SwiftUI application.
+EC25 Toolbox is a native macOS menu bar utility for Quectel EC25, user-reconfigured first-generation DJI Cellular Dongle (LTE USB Modem) hardware, and compatible Baiwang USB modems. It communicates with the modem through IOKit and IOUSBHost, provides direct AT access, and combines cellular status, SMS, calling, SIM security, remote management, eUICC operations, and experimental VoWiFi support in one SwiftUI application.
 
 The application bundle identifier is `ing.fuyaoskyrocket.ec25toolbox`.
 
@@ -25,6 +25,7 @@ The application bundle identifier is `ing.fuyaoskyrocket.ec25toolbox`.
 ## Highlights
 
 - Automatically discovers EC25 devices with USB ID `2c7c:0125`.
+- Supports compatible first-generation DJI Cellular Dongle units after they have been reconfigured outside the application to expose the expected EC25 USB identity and interfaces.
 - Uses native IOKit and IOUSBHost bulk endpoints instead of an external serial-port dependency.
 - Displays signal, carrier, registration, radio quality, SIM identity, modem identity, PDP, APN, and USB networking information.
 - Reads, sends, deletes, and polls UCS2 SMS messages.
@@ -36,6 +37,15 @@ The application bundle identifier is `ing.fuyaoskyrocket.ec25toolbox`.
 - Supports direct-device and encrypted remote-management modes.
 - Provides a native menu bar popover and an optional standalone macOS window.
 - Builds and bundles a patched lpac 2.3.0 executable; no separate lpac installation is required.
+
+## DJI Cellular Dongle Compatibility
+
+EC25 Toolbox originally began as a way to reuse the LTE USB modem inside the first-generation [DJI Cellular Dongle (LTE USB Modem)](https://store.dji.com/uk/product/dji-cellular-dongle-lte-usb-modem). The Toolbox can communicate with a compatible unit after the user has reconfigured it outside the application to expose the Quectel EC25 USB vendor/product identity `2c7c:0125` and the expected EC25 USB interface composition.
+
+EC25 Toolbox does not change the dongle's USB identity, firmware, or hardware configuration. A matching USB ID alone does not prove compatibility: the underlying modem firmware, USB composition, interface numbering, endpoints, and AT command behavior must also match what the native EC25 transport expects.
+
+> [!IMPORTANT]
+> This is a community hardware-reuse path, not an official DJI operating mode or a DJI-supported conversion. It applies only to compatible first-generation DJI Cellular Dongle (LTE USB Modem) units that have already been reconfigured by the user. DJI Cellular Dongle 2 has not been validated. Preserve the original device configuration and a recovery method before making hardware or firmware changes.
 
 ## Experimental Features
 
@@ -67,7 +77,7 @@ It is not macOS system Wi-Fi Calling, does not create a system VPN, and does not
 - macOS 26 or later
 - Xcode containing the macOS 27 SDK
 - Swift 6.2 or later
-- A Quectel EC25 or compatible modem exposing the expected USB interfaces
+- A Quectel EC25, compatible Baiwang modem, or user-reconfigured first-generation DJI Cellular Dongle exposing USB ID `2c7c:0125` and the expected EC25 interfaces
 
 Homebrew, Node.js, Electron, libusb, and a separately installed lpac executable are not required.
 
