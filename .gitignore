@@ -1,0 +1,54 @@
+# Swift Package Manager
+/.build/
+/.swiftpm/
+
+# Xcode and local IDE state
+/DerivedData/
+**/xcuserdata/
+*.xcuserstate
+*.xccheckout
+.idea/
+.vscode/
+
+# Packaged applications and release artifacts
+/dist/
+/release/
+/artifacts/
+*.app
+*.dSYM
+*.xcarchive
+*.dmg
+*.zip
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.key
+*.mobileprovision
+
+# Logs, temporary files, and editor backups
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Local Codex instructions, handoff notes, and visual QA artifacts
+/.local/
+/AGENTS.md
+/HANDOFF.md
+/design-qa.md
+
+# Nested vendor repository metadata must never be committed. The vendored
+# source itself remains tracked by the root repository.
+/ThirdParty/lpac/.git/
