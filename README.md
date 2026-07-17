@@ -1,9 +1,15 @@
-# EC25 Toolbox
+<p align="center">
+  <img src="Docs/Assets/ec25-toolbox-icon.png" alt="EC25 Toolbox app icon" width="128">
+</p>
 
-![Platform](https://img.shields.io/badge/platform-macOS%2026%2B-lightgrey)
-![Swift](https://img.shields.io/badge/Swift-6.2-orange)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Experimental Features](https://img.shields.io/badge/eSTK%20%26%20VoWiFi-experimental-yellow)
+<h1 align="center">EC25 Toolbox</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/platform-macOS%2026%2B-lightgrey" alt="Platform: macOS 26 or later">
+  <img src="https://img.shields.io/badge/Swift-6.2-orange" alt="Swift 6.2">
+  <img src="https://img.shields.io/badge/version-1.0.0-blue" alt="Version 1.0.0">
+  <img src="https://img.shields.io/badge/eSTK%20%26%20VoWiFi-experimental-yellow" alt="eSTK and VoWiFi are experimental">
+</p>
 
 EC25 Toolbox is a native macOS menu bar utility for Quectel EC25 and compatible Baiwang USB modems. It communicates with the modem through IOKit and IOUSBHost, provides direct AT access, and combines cellular status, SMS, calling, SIM security, remote management, eUICC operations, and experimental VoWiFi support in one SwiftUI application.
 
@@ -11,6 +17,10 @@ The application bundle identifier is `ing.fuyaoskyrocket.ec25toolbox`.
 
 > [!WARNING]
 > **eSTK/eUICC and VoWiFi are experimental features.** They may fail, behave differently across modem firmware, eUICCs, SIMs, carriers, and access networks, or cause profile, message, configuration, or other data loss. This project makes no guarantee of their reliability, compatibility, availability, or data integrity. Back up critical data and make sure you have a carrier-supported recovery path before using either feature with an active subscription.
+
+<p align="center">
+  <img src="Docs/Assets/ec25-toolbox-screenshot.png" alt="EC25 Toolbox overview showing cellular status and key modem parameters" width="720">
+</p>
 
 ## Highlights
 
